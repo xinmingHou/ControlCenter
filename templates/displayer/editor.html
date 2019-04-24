@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}OPENPAI{% endblock %}
+{% block content %}
+    <!--<h1>这是OPENPAI代码编写页面</h1>-->
+
+    <div class="container-fluid   border-top">
+        <div class="row">
+            <div class="col-sm-2 border-right">
+                
+                <div class="row">
+                    <div class="col  ">
+                        <div class="header">
+                            <span class="text-center">
+                                    <h4>步骤说明</h4>
+                            </span>
+                        </div>
+                            
+                    </div>
+
+                    <div class="w-100"></div>
+                    
+                    <div class="col ">
+                            <p class="text-break">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;跟随这些步骤，可以帮助你建立并训练一个AI模型。
+                            </p>
+                    </div>
+
+                </div>
+                
+                    
+                <div class="row">
+                    <div class="btn-group-vertical btn-block" role="group" aria-label="Button group with nested dropdown">
+                        
+                        <form method="POST" action="/editor/">
+                            {% csrf_token %}
+                            <button type="submit" class="btn" data-loading-text="加载中..." name="select_tem">step1-选择算法模板</button>
+                            <button type="submit" class="btn" data-loading-text="加载中..." name="ide_coding">step2-编写自己的代码</button>
+                            <button type="submit" class="btn" data-loading-text="加载中..." name="config_sub">step3-配置参数提交训练</button>
+                            <button type="submit" class="btn" data-loading-text="加载中..." name="view_jobs">step4-查看任务列表</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-10">
+                <!-- <div class="row">
+                    <div class="col  ">
+                        <div class="header">
+                            <span class="text-center text-light">
+                                    <h4>{{name_active}}</h4>
+                            </span>
+                        </div>
+                                
+                    </div>
+    
+                    <div class="w-100"></div>
+                        
+                    <div class="col  ">
+                            <p class="text-break  text-light">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{content_active}}
+                            </p>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src={{url_active}} allowfullscreen></iframe>
+                            
+                    </div>
+
+                </div> -->
+                <div class="w-100"></div>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src={{url_active}} allowfullscreen></iframe>
+                        
+                </div>     
+                    
+
+            </div>
+               
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+    
+
+
+
+{% endblock %}

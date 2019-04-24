@@ -1,0 +1,72 @@
+{% extends 'editor_base.html' %}
+{% block title %}OPENPAI{% endblock %}
+{% block content %}
+    <div class="container-fluid">     
+          <div class="row">
+              <div class="col">
+                    <div class="header">
+                            <span class="text-center ">
+                                    <h4>STEP1：选择算法模板</h4>
+                            </span>
+                        </div>
+              </div>
+              
+                      
+          </div>
+              
+          <div class="row ">
+                  <p class="text-break ">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"我们可以实现数十个人工智能分类功能，并且为您准备了50余种常用算法。请在下面的选择框中，按照步骤选择需要的算法模板，将大大加快接下来的coding过程。"
+                  </p>
+          </div>
+
+          <div class="row ">
+            {% regroup algs_all by get_category_display as category_list %}
+            
+              {% for algs in category_list %}
+              <div class="card " style="width: 18rem;">
+                  <div class="card-header"> 
+                      <!-- {{algs.list.0.get_category_display}} -->
+                      {{algs.grouper}} 
+                  </div>
+                  <ul class="list-group list-group-flush">
+                      {% for alg in algs.list %}
+                      <li class="list-group-item">
+                          <button class="btn btn-outline-dark btn-block" id = "{{alg.name_en}}" onclick="selected_temp(this)">
+                              {{alg.name}}
+                          </button> 
+                      </li>
+                      {% endfor %}     
+                  </ul>
+              </div>
+              
+              {% endfor %}
+           
+        
+
+
+          </div>
+
+          
+         
+          
+
+      
+    
+    
+
+    
+    
+      <!-- <div class="w-100"></div> -->
+
+      
+
+
+
+      
+        
+
+
+    </div>
+{% endblock %}
+

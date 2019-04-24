@@ -1,0 +1,62 @@
+{% extends 'editor_base.html' %}
+{% block title %}OPENPAI{% endblock %}
+{% block content %}
+<div class="container-fluid">
+        <!-- <h1>这是配置和提交训练页面</h1> -->
+        <div class="row">
+                <div class="col   ">
+                        <div class="header">
+                                <span class="text-center ">
+                                        <h4>STEP3：配置参数提交训练</h4>
+                                </span>
+                        </div>
+
+                </div>
+
+                <div class="w-100"></div>
+                <div class="col  ">
+                        <p class="text-break  ">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"请对相关参数进行配置，我们已经根据您的需求，帮助填写了一部分。配置好后点击上传开始训练。随后您可以在任务列表中找到该任务。如果需要查看设备运行情况，可以点击训练监控按钮。"
+                        </p>
+                </div>
+
+                <div class="w-100"></div>
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://10.212.47.201/submit.html" allowfullscreen></iframe>       
+        </div>
+                <!-- <div class="row">
+                        <div class="container-fluid">
+                                <div class="col ">
+                                        <form method="POST" >
+                                                {% csrf_token %}
+                                                <div class="form-group">
+                                                        <label for="jobname">任务名称</label>
+                                                        <input class="form-control" type="text"
+                                                                placeholder="Default input" id="jobname">
+                                                        <small id="jobnamehelp"
+                                                                class="form-text text-muted">给job取个喜欢的名字</small>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="gpus">GPUs</label>
+                                                        <input class="form-control" type="text"
+                                                                placeholder="Default input" id="gpus">
+                                                </div>
+
+                                                <button id="submit_job" class="btn btn-primary">提交任务</button>
+                                        </form>
+                                </div>
+                        </div>
+
+
+
+                </div> -->
+
+
+
+
+        </div>
+
+
+
+</div>
+{% endblock %}

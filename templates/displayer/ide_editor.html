@@ -1,0 +1,38 @@
+{% extends 'editor_base.html' %}
+{% block title %}OPENPAI{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+            <!-- <h1>jupyter notebook</h1> -->
+            
+            <div class="row">
+                <div class="col  ">
+                        <div class="header">
+                        <span class="text-center">
+                                <h4>STEP2：编写自己的代码</h4>
+                        </span>
+                        </div>
+                                
+                </div>
+        
+                <div class="w-100"></div>
+                        
+                <div class="col  ">
+                        <p class="text-break ">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"请在下面的编译器中，编写您的算法代码。完成后，点击保存，并进行下一步。"
+                        </p>
+                </div>
+        
+                <div class="w-100"></div>
+                <div class="embed-responsive embed-responsive-16by9">
+                        <!-- <iframe class="embed-responsive-item" src="http://127.0.0.1:8888/notebooks/user_code/UserCode.ipynb" allowfullscreen></iframe>        -->
+                        <iframe class="embed-responsive-item" src="http://10.212.47.232:8888/notebooks/user_code/UserCode.ipynb" allowfullscreen></iframe>       
+             
+                
+                </div>
+                
+        
+                </div>
+                        
+
+    </div>
+{% endblock %}
